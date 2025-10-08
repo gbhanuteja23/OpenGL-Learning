@@ -24,6 +24,12 @@ class Shader
 
 		// Deletes the shader program when no longer needed
 		void Delete(); 
+
+	private:
+		// Utility function that checks for shader compilation and linking
+		// errors and prints them to the console.
+		void CompileErrors(unsigned int shader, const char* type); 
+
 };
 
 #endif // !SHADER_CLASS_H

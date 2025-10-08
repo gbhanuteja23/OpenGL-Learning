@@ -10,7 +10,7 @@
 using namespace std; 
 
 
-//Vertices coordinates: Each vertex has 3 position floats + 3 color floats
+//Vertices coordinates: Each vertex has 3 position floats (x, y, z) + 3 color floats (r, g, b)
 GLfloat vertices[] =
 {
 	// Positions								   // Colors (R, G, B)
@@ -87,22 +87,27 @@ int main()
 	VAO1.Unbind();
 	VBO1.Unbind();
 
+	//Uniform: Scale Factor
+	GLuint uniID = glGetUniformLocation(ShaderProgram.ID, "scale");
 
-	//Main while loop
+	//Main while/Render loop
 	while (!glfwWindowShouldClose(window))
 	{
-		glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT);
+		glClearColor(0.07f, 0.13f, 0.17f, 1.0f);		// Background color
+		glClear(GL_COLOR_BUFFER_BIT);					// Clear frame buffer
 
 		//Tell OpenGL which Shader Program we want to use 
 		ShaderProgram.Activate(); 
+
+		// Set scale value
+		glUniform1f(uniID, 0.5f); 
 
 		//Bind the VAO so OpenGL knows how to use it
 		VAO1.Bind(); 
 
 		//Draw the triangle using the GL_TRIANGLES primitive 
 		glDrawElements(GL_TRIANGLES, 9, GL_UNSIGNED_INT, 0); 
-		glfwSwapBuffers(window); 
+		glfwSwapBuffers(window);				// Display the rendered frame
 
 		//Take care of all GLFW events
 		glfwPollEvents(); 
