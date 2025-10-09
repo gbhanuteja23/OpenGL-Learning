@@ -5,7 +5,7 @@
 layout (location = 0) in vec3 aPos;				// Vertex position
 layout (location = 1) in vec3 aColor;			// Vertex color
 
-layout (location = 3) in vec2 aTex; 
+layout (location = 2) in vec2 aTex; 
 
 out vec3 vertexColor;							 // Output to fragment shader
 
