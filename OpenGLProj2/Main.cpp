@@ -92,7 +92,7 @@ int main()
 
 	//Texture
 
-	Texture woodenTex("wooden-texture.jpg", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGB, GL_UNSIGNED_BYTE);
+	Texture woodenTex("saranda.jpg", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGB, GL_UNSIGNED_BYTE);
 	woodenTex.texUnit(ShaderProgram, "tex0", 0);
 
 	//Main while/Render loop

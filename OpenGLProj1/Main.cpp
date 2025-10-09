@@ -1,6 +1,7 @@
 #include<iostream>
 #include<glad/glad.h>
 #include<GLFW/glfw3.h>
+#include<stb/stb_image.h>
 
 #include "ShaderClass.h"
 #include "VAO.h"
@@ -100,7 +101,7 @@ int main()
 		ShaderProgram.Activate(); 
 
 		// Set scale value
-		glUniform1f(uniID, 0.5f); 
+		glUniform1f(uniID, 0.2f); 
 
 		//Bind the VAO so OpenGL knows how to use it
 		VAO1.Bind(); 

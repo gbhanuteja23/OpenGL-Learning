@@ -75,5 +75,8 @@
     <Image Include="C:\Users\CE00148322\Downloads\wooden-texture.jpg">
       <Filter>Resource Files\Textures</Filter>
     </Image>
+    <Image Include="saranda.jpg">
+      <Filter>Resource Files\Textures</Filter>
+    </Image>
   </ItemGroup>
 </Project>

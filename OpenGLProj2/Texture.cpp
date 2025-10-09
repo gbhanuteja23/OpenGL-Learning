@@ -18,6 +18,17 @@ Texture::Texture(const char* image, GLenum texType, GLenum slot, GLenum format, 
 		return;
 	}
 
+	std::cout << "Texture bytes pointer: " << (void*)bytes << " size: "
+		<< widthImg << "x" << heightImg << " channels: " << numColCh << std::endl;
+
+	size_t size = (size_t)widthImg * heightImg * numColCh;
+	for (size_t i = 0; i < size; ++i) {
+		if (bytes[i] > 255) {
+			std::cerr << "Corrupt texture data detected!" << std::endl;
+			break;
+		}
+	}
+
 
 	// Generates an OpenGL texture object
 	glGenTextures(1, &ID);
@@ -53,6 +64,8 @@ Texture::Texture(const char* image, GLenum texType, GLenum slot, GLenum format, 
 	{
 		format = GL_RED; // Or GL_LUMINANCE for older OpenGL
 	}
+
+	glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
 
 	glTexImage2D(texType, 0, GL_RGB, widthImg, heightImg, 0, format, pixelType, bytes);
 
