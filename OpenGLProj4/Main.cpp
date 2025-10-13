@@ -110,6 +110,7 @@ int main()
 	//Enables the Depth Buffer
 	glEnable(GL_DEPTH_TEST);
 
+	//Creates camera object
 	Camera camera(width, height, glm::vec3(0.0f, 0.0f, 2.0f)); 
 
 	double prevTime = glfwGetTime();
@@ -118,7 +119,8 @@ int main()
 	while (!glfwWindowShouldClose(window))
 	{
 		glClearColor(0.07f, 0.13f, 0.17f, 1.0f);							// Background color
-		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);					// Clear frame buffer
+		
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);					// Clean the back buffer and depth buffer
 
 		//Tell OpenGL which Shader Program we want to use 
 		ShaderProgram.Activate(); 
@@ -129,10 +131,12 @@ int main()
 		{
 			float deltaTime = crntTime - prevTime; 
 
+			// Handles camera inputs
 			camera.Inputs(window, deltaTime);
 			prevTime = crntTime;
 		}		
 
+		//Updates and exports the camera matrix to the Vertex Shader 
 		camera.Matrix(45.0f, 0.1f, 100.0f, ShaderProgram, "camMatrix"); 
 
 		glActiveTexture(GL_TEXTURE0);
