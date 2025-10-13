@@ -78,5 +78,8 @@
     <Image Include="saranda.jpg">
       <Filter>Resource Files\Textures</Filter>
     </Image>
+    <Image Include="sandstone-tiled.jpg">
+      <Filter>Resource Files\Textures</Filter>
+    </Image>
   </ItemGroup>
 </Project>
