@@ -27,7 +27,7 @@ GLfloat vertices[] =
 	-0.5f, 0.0f, 0.5f,		0.83f, 0.70f, 0.44f,		0.0f, 0.0f,  		// Lower left corner
 	-0.5f, 0.0f,  -0.5f,	0.83f, 0.70f, 0.44f,		1.0f, 0.0f,		// Upper left corner
 	 0.5f, 0.0f, -0.5f,		0.83f, 0.70f, 0.44f,		1.0f, 1.0f,		// Upper right corner
-	 0.5f, 0.0f, 0.5f,		0.83f, 0.70f, 0.44f,		0.0f, 1.0f,			// Lower right corner
+	 0.5f, 0.0f, 0.5f,		0.83f, 0.70f, 0.44f,		1.0f, 0.0f,			// Lower right corner
 	 0.0f, 0.8f, 0.0f,		0.82f, 0.86f, 0.44f,		0.5f, 1.0f
 
 };
