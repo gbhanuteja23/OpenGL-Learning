@@ -1,3 +1,5 @@
 ﻿  Main.cpp
 E:\3-Graphics-Programming\0-OpenGL\OpenGLProj4\Main.cpp(211,20): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Texture.cpp
+  Generating Code...
   OpenGLProj1.vcxproj -> E:\3-Graphics-Programming\0-OpenGL\OpenGLProj4\x64\Debug\OpenGLProj1.exe
