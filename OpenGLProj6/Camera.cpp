@@ -5,6 +5,9 @@ Camera::Camera(int width, int height, glm::vec3 position)
 	Camera::width = width;
 	Camera::height = height;
 	Position = position;
+
+	// Rotate it downward by 90 degrees around the Y-axis
+	Orientation = glm::rotate(Orientation, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 }
 
 void Camera::UpdateMatrix(float FOVdeg, float nearPlane, float farPlane)
