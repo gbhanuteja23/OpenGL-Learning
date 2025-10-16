@@ -1,0 +1,11 @@
+Model Information:
+* title:	HAL Tejas
+* source:	https://sketchfab.com/3d-models/hal-tejas-fd95c85e2452490cbe32f80175498441
+* author:	dimal965 (https://sketchfab.com/dimal965)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "HAL Tejas" (https://sketchfab.com/3d-models/hal-tejas-fd95c85e2452490cbe32f80175498441) by dimal965 (https://sketchfab.com/dimal965) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
