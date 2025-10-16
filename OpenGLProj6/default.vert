@@ -22,16 +22,19 @@ out vec2 texCoord;								//Outputs the texture coordinates to the Fragment Shad
 	
 uniform mat4 camMatrix;							//Imports the camera matrix from the main function
 uniform mat4 model;								//Imports the model matrix from the main function
+uniform mat4 translation;
+uniform mat4 rotation;
+uniform mat4 scale;
 
 void main()
 {
 	//Calculates current position
-	crntPos = vec3(model * vec4(aPos, 1.0f)); 
+	crntPos = vec3(model * translation * -rotation * scale * vec4(aPos, 1.0f)); 
 
 	Normal = aNormal;										// Assigns the normal from the Vertex Data to "Normal"
 
 	Color = aColor;									// Assigns the colors from Vertex Data to "color"
-	texCoord = aTex;										// Assigns the texture coordintaes from the Vertex Data to "texCoord"
+	texCoord = mat2(0.0f, -1.0f, 1.0, 0.0f) * aTex;										// Assigns the texture coordintaes from the Vertex Data to "texCoord"
 
 	gl_Position = camMatrix * vec4(crntPos, 1.0);			// Outputs the positions/coordinates of all vertices
 	
