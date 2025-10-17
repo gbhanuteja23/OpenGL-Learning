@@ -54,7 +54,7 @@ vec4 PointLight()
 vec4 DirectionalLight()
 {
 	//ambient light
-	float ambient = 0.20f;												// ambient lighting 
+	float ambient = 0.65f;												// ambient lighting 
 
 	//diffuse lighting
 	vec3 normal = normalize(Normal);									
@@ -62,7 +62,7 @@ vec4 DirectionalLight()
 	float diffuse = max(dot(normal, lightDirection), 0.0f); 
 
 	//Specular lighting
-	float specularLight = 0.50f; 
+	float specularLight = 2.0f; 
 	vec3 viewDirection = normalize(camPos - crntPos);
 	vec3 reflectionDirection = reflect( -lightDirection, normal); 
 	float specAmount = pow(max(dot(viewDirection, reflectionDirection), 0.0f), 16); 
