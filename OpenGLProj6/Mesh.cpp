@@ -60,6 +60,8 @@ void Mesh::Draw
 		}
 
 		textures[i].texUnit(shader, (type + num).c_str(), i);
+		// Activate the texture unit
+		glActiveTexture(GL_TEXTURE0 + i);
 		textures[i].Bind(); 
 
 	}
