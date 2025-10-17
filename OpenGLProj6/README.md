@@ -1,4 +1,6 @@
-# OpenGL - Project 5
+# OpenGL - Project 6
 
 
-* In this project I've exprimented with vaious types of lights ( Point Light, Directional Light and Spot Light ). 
+* In this project I've created a custom Model Loader for GLTF files. 
+
+![OpenGL Project 6 Output](0-Pictures_Videos/0-Loading-3D-models-using-custom-GLTF-Model-Loader.png)
