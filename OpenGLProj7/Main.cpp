@@ -67,10 +67,11 @@ int main()
 	glFrontFace(GL_CW); // Set winding order to Clockwise
 
 	Model ground("models/ground/scene.gltf");
-	//ground.position = glm::vec3(0.0f, 0.0f, 0.0f);
+	ground.SetPosition(glm::vec3(0.0f, 0.0f, 0.0f));
 	//ground.scale = glm::vec3(10.0f);
 
 	Model trees("models/trees/scene.gltf");
+	//trees.SetPosition(glm::vec3(0.0f, 2.0f, 0.0f));
 	//trees.position = glm::vec3(0.0f, 8.0f, 2.0f); // move it away from ground
 
 	glFrontFace(GL_CCW); // Set winding order back to Counter-Clockwise

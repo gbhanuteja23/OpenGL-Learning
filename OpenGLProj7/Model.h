@@ -20,6 +20,7 @@ class Model
 
 		glm::mat4 GetTransform() const; 
 
+		void SetPosition(const glm::vec3& pos) { position = pos; }
 
 	private:
 		const char* file;
